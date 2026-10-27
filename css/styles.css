@@ -180,3 +180,14 @@ footer {
     color: var(--blanco);
 
 }
+
+@media (max-width 768px) {
+    .contenedor-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .columnas {
+        flex-direction: column;
+    }
+}
