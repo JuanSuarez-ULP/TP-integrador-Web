@@ -3,6 +3,7 @@
     --color-secundario: #00bcd4;
     --color-fondo: #f4f6f8;
     --color-texto: #2c3e50;
+    --blanco: #ffffff;
     --fuente: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -50,6 +51,24 @@ header {
     object-fit: contain;
 }
 
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover, nav a.active {
+  background-color: var(--color-primario);
+}
 
 .titulo {
     text-align: center;
