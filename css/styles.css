@@ -17,6 +17,9 @@ body {
     font-family: var(--fuente);
     background-color: var(--color-fondo);
     color: var(--color-texto);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -160,4 +163,13 @@ main {
 
 .btn-submit:hover {
     background-color: #0b0f19;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    background-color: var(--color-primario);
+    color: var(--blanco);
+
 }
