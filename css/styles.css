@@ -7,6 +7,10 @@
     --fuente: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+    height: 100%;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -20,6 +24,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    height: 100%;
 }
 
 header {
@@ -73,9 +78,11 @@ nav a:hover, nav a.active {
   background-color: var(--color-primario);
 }
 main {
+    flex: 1;
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1.5rem;
+    width: 100%;
 }
 
 
