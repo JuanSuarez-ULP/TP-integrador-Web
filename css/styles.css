@@ -96,3 +96,53 @@ nav a:hover, nav a.active {
     color: var(--color-primario);
     margin-bottom: 0.8rem;
 }
+
+.form-section {
+    background-color: var(--blanco);
+    padding: 2rem;
+    margin: 0 auto 3rem auto;
+    box-shadow: 0 2px 8px black;
+    max-width: 700px;
+    border-radius: 8px;
+}
+
+.form {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form input, .form select {
+    padding: 0.70rem;
+    font-family: var(--fuente);
+    font-size: 1rem;
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+}
+
+.form input:focus, .form select:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+}
+
+.form label {
+    margin-bottom: 0.70rem;
+    font-weight: 500;
+}
+
+.btn-submit {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--color-secundario);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--blanco);
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border: 1px solid black;
+}
+
+.btn-submit:hover {
+    background-color: #0b0f19;
+}
