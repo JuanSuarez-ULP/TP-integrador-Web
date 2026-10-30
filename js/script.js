@@ -99,21 +99,22 @@ const carrusel = [
   {
     src: "imagenes/Lionel Messi Fc BARCELONA 2010-2011.jpg",
     alt: "imagen 1",
-    caption: "EL GOAT"
+    caption: "texto de prueba 1"
   },
   {
     src: "imagenes/descarga.jpg",
     alt: "imagen 2",
-    caption: "texto de prueba"
+    caption: "texto de prueba 2"
   },
   {
     src: "imagenes/messi balon de oror.jpg",
     alt: "imagen 3",
-    caption: "texto de prueba"
+    caption: "texto de prueba 3"
   }
 ];
 
 let indiceActual = 0;
+let intervalo;
 
 function carruselInicio() {
   const imgElement = document.getElementById("carrusel-img");
@@ -121,7 +122,8 @@ function carruselInicio() {
   const prevBtn = document.getElementById("prev-btn");
   const nextBtn = document.getElementById("next-btn");
 
-  if (!imgElement) return; 
+  if (!imgElement) 
+    return; 
 
   function deslizarImagen(indice) {
     const item = carrusel[indice];
@@ -130,17 +132,41 @@ function carruselInicio() {
     captionElement.textContent = item.caption;
   }
 
+  function siguienteImagen() {
+    indiceActual = (indiceActual + 1) % carrusel.length;
+    deslizarImagen(indiceActual);
+  }
+
+  function iniciarIntervalo() {
+    intervalo = setInterval(siguienteImagen, 6000);
+  }
+
+  function detenerIntervalo() {
+    clearInterval(intervalo);
+  }
+
+
   prevBtn.addEventListener("click", () => {
     indiceActual = (indiceActual - 1 + carrusel.length) % carrusel.length;
     deslizarImagen(indiceActual);
+    detenerIntervalo();
+
   });
 
   nextBtn.addEventListener("click", () => {
     indiceActual = (indiceActual + 1) % carrusel.length;
     deslizarImagen(indiceActual);
+    detenerIntervalo();
+    iniciarIntervalo();
   });
 
+
+  const contenedor = imgElement.parentElement;
+  contenedor.addEventListener("ponerclick", detenerIntervalo);
+  contenedor.addEventListener("sacarclick", iniciarIntervalo);
+
   deslizarImagen(indiceActual);
+  iniciarIntervalo();
 
 }
 
