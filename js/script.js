@@ -97,17 +97,17 @@ validarForm();
 
 const carrusel = [
   {
-    src: "imagenes/Lionel Messi Fc BARCELONA 2010-2011.jpg",
+    src: "Imagenes/Lionel Messi Fc BARCELONA 2010-2011.jpg",
     alt: "imagen 1",
     caption: "texto de prueba 1"
   },
   {
-    src: "imagenes/descarga.jpg",
+    src: "Imagenes/descarga.jpg",
     alt: "imagen 2",
     caption: "texto de prueba 2"
   },
   {
-    src: "imagenes/messi balon de oror.jpg",
+    src: "Imagenes/messi balon de oror.jpg",
     alt: "imagen 3",
     caption: "texto de prueba 3"
   }
