@@ -69,7 +69,7 @@ function renderSummary(data) {
     tarjeta.className = "tarjeta-datos";
 
     const titulo = document.createElement("h3");
-    titulo.className = "titulo-datos";
+    titulo.textContent = "Reserva registrada correctamente";
 
     const lista = document.createElement("ul");
 
