@@ -94,26 +94,22 @@ function renderSummary(data) {
 
 validarForm();
 
-document.addEventListener("DOMContentLoaded", () => {
-  carruselInicio();
-  validarForm();
-});
 
 const carrusel = [
   {
     src: "imagenes/Lionel Messi Fc BARCELONA 2010-2011.jpg",
     alt: "imagen 1",
-    caption: "EL GOAT"
+    caption: "texto de prueba 1"
   },
   {
     src: "imagenes/descarga.jpg",
     alt: "imagen 2",
-    caption: "texto de prueba"
+    caption: "texto de prueba 2"
   },
   {
     src: "imagenes/messi balon de oror.jpg",
     alt: "imagen 3",
-    caption: "texto de prueba"
+    caption: "texto de prueba 3"
   }
 ];
 
