@@ -122,6 +122,17 @@ main {
     object-fit: cover;
 }
 
+.carrusel-caption {
+    position: absolute;
+    bottom: 0;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+    color: var(--blanco);
+    padding: 1rem 1rem 1rem 1rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+}
+
 .carrusel-btn {
     position: absolute;
     top: 50%;
