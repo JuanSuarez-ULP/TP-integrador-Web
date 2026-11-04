@@ -1,19 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
   const carrusel = [
     {
-      src: "Imagenes/Lionel Messi Fc BARCELONA 2010-2011.jpg",
-      alt: "imagen 1",
-      caption: "texto de prueba 1",
-    },
-    {
-      src: "Imagenes/descarga.jpg",
+      src: "Imagenes/timosportimg2.jpeg",
       alt: "imagen 2",
-      caption: "texto de prueba 2",
+      caption: "Cesped sintético de alta calidad para mayor rendimiento y durabilidad",
     },
     {
-      src: "Imagenes/messi balon de oror.jpg",
+      src: "Imagenes/timosportimg3.jpeg",
       alt: "imagen 3",
-      caption: "texto de prueba 3",
+      caption: "Iluminación LED de alta potencia para partidos nocturnos",
+    },
+    {
+      src: "Imagenes/timosportimg4.jpeg",
+      alt: "imagen 4",
+      caption: "Entrada al campo de juego",
+    },
+    {
+      src: "Imagenes/timosportimg5.jpeg",
+      alt: "imagen 4",
+      caption: "Vista a uno de los arcos de la cancha",
+    },
+    {
+      src: "Imagenes/timosportimg6.jpeg",
+      alt: "imagen 4",
+      caption: "Entrada al complejo deportivo",
     },
   ];
 
@@ -34,17 +44,35 @@ document.addEventListener("DOMContentLoaded", () => {
       captionElement.textContent = item.caption;
     }
 
+    function siguienteImagen() {
+     indiceActual = (indiceActual + 1) % carrusel.length;
+     deslizarImagen(indiceActual);
+  }
+
+    function iniciarIntervalo() {
+     intervalo = setInterval(siguienteImagen, 5000);
+  }
+
+    function detenerIntervalo() {
+     clearInterval(intervalo);
+  }
+
     prevBtn.addEventListener("click", () => {
       indiceActual = (indiceActual - 1 + carrusel.length) % carrusel.length;
       deslizarImagen(indiceActual);
+      detenerIntervalo();
+      iniciarIntervalo();
     });
 
     nextBtn.addEventListener("click", () => {
       indiceActual = (indiceActual + 1) % carrusel.length;
       deslizarImagen(indiceActual);
+      detenerIntervalo();
+      iniciarIntervalo();
     });
 
     deslizarImagen(indiceActual);
+    iniciarIntervalo();
   }
 
   carruselInicio();
